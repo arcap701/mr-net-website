@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR. NET - Nettoyage & Entretien</title>
+    <style>
+        :root {
+            --bleu-mrnet: #223b5c;
+            --jaune-mrnet: #ffe04a;
+            --blanc: #fff;
+            --gris-fond: #f7f9fa;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: var(--gris-fond);
+            color: var(--bleu-mrnet);
+        }
+        .navbar {
+            background: var(--bleu-mrnet);
+            color: var(--blanc);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo-img {
+            height: 48px;
+            width: auto;
+            margin-right: 14px;
+            background: none;
+            border-radius: 4px;
+        }
+        .navbar nav a {
+            color: var(--jaune-mrnet);
+            text-decoration: none;
+            margin-left: 24px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .navbar nav a:hover {
+            color: var(--blanc);
+        }
+        .hero {
+            background: linear-gradient(120deg, var(--bleu-mrnet) 70%, var(--jaune-mrnet) 100%);
+            color: var(--blanc);
+            padding: 80px 0 60px 0;
+            text-align: center;
+            position: relative;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: var(--jaune-mrnet);
+            text-shadow: 1px 1px 2px #0002;
+        }
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: var(--blanc);
+        }
+        .hero .cta-btn {
+            background: var(--jaune-mrnet);
+            color: var(--bleu-mrnet);
+            border: none;
+            padding: 14px 32px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s, color 0.2s;
+        }
+        .hero .cta-btn:hover {
+            background: var(--blanc);
+            color: var(--bleu-mrnet);
+        }
+        .services {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--bleu-mrnet);
+        }
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: var(--blanc);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 28px 20px;
+            text-align: center;
+            color: var(--bleu-mrnet);
+            border-bottom: 4px solid var(--jaune-mrnet);
+        }
+        .service-card h3 {
+            color: var(--bleu-mrnet);
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            color: #444;
+        }
+        .contact {
+            background: var(--bleu-mrnet);
+            color: var(--blanc);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .contact h2 {
+            margin-bottom: 18px;
+            color: var(--jaune-mrnet);
+        }
+        .contact-info {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: var(--jaune-mrnet);
+            text-decoration: underline;
+        }
+        .footer {
+            background: var(--jaune-mrnet);
+            color: var(--bleu-mrnet);
+            text-align: center;
+            padding: 18px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .navbar .logo-img { height: 32px; }
+            .navbar { flex-direction: column; align-items: flex-start; }
+            .navbar nav { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo-mrnet.png" alt="Logo MR. NET" class="logo-img">
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">À propos</a>
+        </nav>
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Nettoyage & Entretien Professionnel</h1>
+            <p>Pour véhicules, locaux et flottes d'entreprise. Service rapide, fiable et écologique.</p>
+            <a href="#contact"><button class="cta-btn">Demander un devis</button></a>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2>Nos Services</h2>
+        <div class="service-list">
+            <div class="service-card">
+                <h3>Nettoyage Extérieur</h3>
+                <p>Lavage haute pression, dégraissage, polissage et protection de carrosserie pour tous types de véhicules.</p>
+            </div>
+            <div class="service-card">
+                <h3>Nettoyage Intérieur</h3>
+                <p>Aspiration, désinfection, nettoyage des sièges, moquettes et surfaces intérieures.</p>
+            </div>
+            <div class="service-card">
+                <h3>Entretien Préventif</h3>
+                <p>Vérification des fluides, pneus, batteries et petits entretiens pour prolonger la durée de vie de vos véhicules.</p>
+            </div>
+            <div class="service-card">
+                <h3>Services pour Flottes</h3>
+                <p>Nettoyage et entretien régulier de flottes de véhicules avec contrats adaptés aux professionnels.</p>
+            </div>
+            <div class="service-card">
+                <h3>Désinfection & Sanitisation</h3>
+                <p>Traitement antibactérien et désinfection complète pour garantir la sécurité de vos équipes.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Contactez-nous</h2>
+        <div class="contact-info">
+            📞 418-230-9650<br>
+            ✉️ <a href="mailto:monsieurnet2025@gmail.com">monsieurnet2025@gmail.com</a><br>
+            📍 1090 55E Rue, Saint-Georges, QC, Canada
+        </div>
+        <p>Ou envoyez-nous un <a href="mailto:monsieurnet2025@gmail.com">email</a>.</p>
+    </section>
+    <section class="footer">
+        &copy; 2025 MR. NET - Nettoyage & Entretien. Tous droits réservés.
+    </section>
+</body>
+</html>
